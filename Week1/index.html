@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Chapter 5 Practice Exercises</title>
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <script src="babel.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const Header = () => {
+        return (
+          <header id="myHeader">
+            <h2> Knowledge is of no value unless you put it into practice!</h2>
+          </header>
+        );
+      };
+
+      const Footer = () => {
+        return (
+          <footer id="myFooter">
+            <h3> Remember the end in the beginning</h3>
+          </footer>
+        );
+      };
+
+      const Content = () => {
+        return (
+          <main>
+            <h2>
+              “You may say I'm a dreamer, but I'm not the only one. I hope
+              someday you'll join us. And the world will live as one.” ― John
+              Lennon
+            </h2>
+          </main>
+        );
+      };
+
+      // Practice #5
+      // Create a component named "App"
+      // Have it return a Fragment with the Header and List components inside of it
+      // NOTE: The <> shorthand will not work with this demo, use <React.Fragment> for now
+      function App() {
+        return (
+          <React.Fragment>
+            <Header />
+            <Content />
+            <Footer />
+          </React.Fragment>
+        );
+      }
+
+      ReactDOM.render(
+        // Place your element variable or component function call here to test
+        <App />,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
