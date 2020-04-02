@@ -1,0 +1,45 @@
+/*
+ Theme Name:   Twenty Twenty Child
+ Theme URI:    http://example.com/twenty-twenty-child/
+ Description:  Twenty Twenty Child Theme
+ Author:       Praveen
+ Author URI:   http://praveen.blog
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentytwentychild
+*/
+
+body {
+  background-color: #4661b1;
+  color: #000;
+  font-family: sans-serif;
+  line-height: 2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#react-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #b0dff3;
+}
+
+main {
+  background-color: #4661b1;
+  max-width: 75vw;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #d6b29f;
+}
