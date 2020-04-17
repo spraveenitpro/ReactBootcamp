@@ -1,0 +1,43 @@
+body {
+  background-color: #4661b1;
+  color: #000;
+  font-family: sans-serif;
+  line-height: 2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #b0dff3;
+}
+
+main {
+  background-color: #4661b1;
+  max-width: 75vw;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #d6b29f;
+}
+
+main ul {
+  background-color: #fff;
+  line-height: 50px;
+  list-style: none;
+  margin-left: 0;
+}
+
+main ul li {
+  text-align: left;
+  list-style-type: latin;
+}
