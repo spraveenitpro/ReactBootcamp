@@ -30,16 +30,13 @@ const PostList = (props) => {
   );
 };
 
-const ActualPost = (props) => {
-  for (const item of props.posts) {
-    if (props.postId == item.id) {
-      var content = item.content.rendered;
-    }
-  }
+const ActualPost = ({ selectedPost }) => {
   return (
     <>
       <h2> Article:</h2>
-      <p>{content}</p>
+      <div
+        dangerouslySetInnerHTML={{ __html: selectedPost.content.rendered }}
+      />
     </>
   );
 };
@@ -67,6 +64,12 @@ class App extends React.Component {
     console.log(e.target);
   };
 
+  getSelectedPost = () => {
+    return this.state.posts.find(
+      ({ id }) => id === parseInt(this.state.selectedPostID)
+    );
+  };
+
   componentDidMount() {
     let url = "https://ma.tt/wp-json/wp/v2/posts";
     fetch(url)
@@ -85,10 +88,7 @@ class App extends React.Component {
           handleClick={this.handleClick}
         />
         {this.state.isClicked ? (
-          <ActualPost
-            postId={this.state.selectedPostID}
-            posts={this.state.posts}
-          />
+          <ActualPost selectedPost={this.getSelectedPost()} />
         ) : (
           ""
         )}
