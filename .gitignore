@@ -15,3 +15,5 @@ node_modules/
 # I'll include it here to help out.
 .DS_Store
 .DS_Store?
+
+firebase.js
